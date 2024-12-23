@@ -2,32 +2,20 @@ from setuptools import setup, Extension
 from Cython.Build import cythonize
 import os
 
-# Define the paths to LP Solve - make them environment-aware
-def get_lpsolve_paths():
-    # Check if we're in Streamlit Cloud
-    if os.path.exists('/mount/src'):
-        return {
-            'include_dirs': ['/usr/include/lpsolve'],
-            'library_dirs': ['/usr/lib/x86_64-linux-gnu'],
-            'libraries': ['lpsolve55']
-        }
-    # Codespace paths
-    return {
-        'include_dirs': [r'/workspaces/deploy-streamlit-last/lpsolve'],
-        'library_dirs': [r'/workspaces/deploy-streamlit-last/lpsolve'],
-        'libraries': ['lpsolve55']
-    }
+# Define the paths to LP Solve
+base_path = '/mount/src/deploy-streamlit-last/lpsolve' if os.path.exists('/mount/src') else '/workspaces/deploy-streamlit-last/lpsolve'
 
-paths = get_lpsolve_paths()
+include_dirs = [base_path]
+library_dirs = [base_path]
+libraries = ["lpsolve55"]
 
-# Build the extension
 extensions = [
     Extension(
         "clara.pylpsolve",
         ["clara/pylpsolve.pyx"],
-        include_dirs=paths['include_dirs'],
-        library_dirs=paths['library_dirs'],
-        libraries=paths['libraries'],
+        include_dirs=include_dirs,
+        library_dirs=library_dirs,
+        libraries=libraries,
     )
 ]
 
