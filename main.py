@@ -1,16 +1,15 @@
 import streamlit as st
-import sys
 import os
 import glob
 from ast import literal_eval
 
-os.environ['LD_LIBRARY_PATH'] = '/workspaces/deploy-streamlit-last/lpsolve:'
+os.environ['LD_LIBRARY_PATH'] = '/workspaces/deploy-streamlit-last/lpsolve'
 
 # Import clara components
 from clara.matching import Matching
 from clara.interpreter import getlanginter
 from clara.parser import getlangparser
-from clara.repair import Repair
+from clara.repairs import Repair
 from clara.feedback import Feedback, FeedGen
 from clara.feedback_repair import RepairFeedback
 from clara.feedback_simple import SimpleFeedback
