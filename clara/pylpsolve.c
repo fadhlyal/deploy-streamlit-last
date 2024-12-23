@@ -4,6 +4,15 @@
 {
     "distutils": {
         "depends": [],
+        "include_dirs": [
+            "/workspaces/deploy-streamlit-last/lpsolve"
+        ],
+        "libraries": [
+            "lpsolve55"
+        ],
+        "library_dirs": [
+            "/workspaces/deploy-streamlit-last/lpsolve"
+        ],
         "name": "clara.pylpsolve",
         "sources": [
             "clara/pylpsolve.pyx"
@@ -1511,13 +1520,13 @@ static const char *__pyx_filename;
 /* #### Code section: filename_table ### */
 
 static const char *__pyx_f[] = {
-  "clara\\\\pylpsolve.pyx",
+  "clara/pylpsolve.pyx",
   "<stringsource>",
-  "clara-env\\\\Lib\\\\site-packages\\\\Cython\\\\Includes\\\\cpython\\\\contextvars.pxd",
-  "clara-env\\\\Lib\\\\site-packages\\\\Cython\\\\Includes\\\\cpython\\\\array.pxd",
-  "clara-env\\\\Lib\\\\site-packages\\\\Cython\\\\Includes\\\\cpython\\\\type.pxd",
-  "clara-env\\\\Lib\\\\site-packages\\\\Cython\\\\Includes\\\\cpython\\\\bool.pxd",
-  "clara-env\\\\Lib\\\\site-packages\\\\Cython\\\\Includes\\\\cpython\\\\complex.pxd",
+  "contextvars.pxd",
+  "array.pxd",
+  "type.pxd",
+  "bool.pxd",
+  "complex.pxd",
 };
 /* #### Code section: utility_code_proto_before_types ### */
 /* ForceInitThreads.proto */
@@ -2804,7 +2813,7 @@ static const char __pyx_k_LpModel_setverbose[] = "LpModel.setverbose";
 static const char __pyx_k_asyncio_coroutines[] = "asyncio.coroutines";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
 static const char __pyx_k_LpModel_setpresolve[] = "LpModel.setpresolve";
-static const char __pyx_k_clara_pylpsolve_pyx[] = "clara\\pylpsolve.pyx";
+static const char __pyx_k_clara_pylpsolve_pyx[] = "clara/pylpsolve.pyx";
 static const char __pyx_k_LpModel_getvariables[] = "LpModel.getvariables";
 static const char __pyx_k_LpModel_addconstraint[] = "LpModel.addconstraint";
 static const char __pyx_k_LpModel_printsolution[] = "LpModel.printsolution";
