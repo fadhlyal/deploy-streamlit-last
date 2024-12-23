@@ -19,6 +19,7 @@
   },
   "updateContentCommand": "[ -f packages.txt ] && sudo apt update && sudo apt upgrade -y && sudo xargs apt install -y <packages.txt; [ -f requirements.txt ] && pip3 install --user -r requirements.txt; pip3 install --user streamlit; echo '✅ Packages installed and Requirements met'",
   "postAttachCommand": {
+    "setup": "export LD_LIBRARY_PATH=/workspaces/deploy-streamlit-last/lpsolve: && cd /workspaces/deploy-streamlit-last && python setup.py build_ext --inplace && chmod 755 /workspaces/deploy-streamlit-last/lpsolve/liblpsolve55.so",
     "server": "streamlit run main.py --server.enableCORS false --server.enableXsrfProtection false"
   },
   "portsAttributes": {
@@ -29,5 +30,8 @@
   },
   "forwardPorts": [
     8501
-  ]
+  ],
+  "containerEnv": {
+    "PYTHONPATH": "/workspaces/deploy-streamlit-last/lpsolve"
+  }
 }
