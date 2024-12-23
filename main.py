@@ -3,6 +3,8 @@ import os
 import glob
 from ast import literal_eval
 
+os.environ['LD_LIBRARY_PATH'] = '/workspaces/deploy-streamlit-last/lpsolve:' + os.environ.get('LD_LIBRARY_PATH', '')
+
 # Import clara components
 from clara.matching import Matching
 from clara.interpreter import getlanginter
