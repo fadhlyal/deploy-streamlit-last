@@ -8,7 +8,7 @@ import time
 # clara imports
 from .common import debug
 from .model import SPECIAL_VARS
-from clara.pylpsolve import LpModel, EQ, LE, GE, TIMEOUT, SUBOPTIMAL, NUMFAILURE
+from .pylpsolve import LpModel, EQ, LE, GE, TIMEOUT, SUBOPTIMAL, NUMFAILURE
 from .repair import Timeout
 
 
