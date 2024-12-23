@@ -37,3 +37,7 @@ setup(
         'clara': ['liblpsolve55.so'],
       },
 )
+
+print("Current directory:", os.getcwd())
+print("Include dirs:", ['include_dirs'])
+print("Library dirs:", ['library_dirs'])
