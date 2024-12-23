@@ -3,8 +3,6 @@ import os
 import glob
 from ast import literal_eval
 
-os.environ['LD_LIBRARY_PATH'] = '/workspaces/deploy-streamlit-last/lpsolve'
-
 # Import clara components
 from clara.matching import Matching
 from clara.interpreter import getlanginter
@@ -14,9 +12,6 @@ from clara.feedback import Feedback, FeedGen
 from clara.feedback_repair import RepairFeedback
 from clara.feedback_simple import SimpleFeedback
 from clara.feedback_python import PythonFeedback
-
-os.environ['LD_LIBRARY_PATH'] = '/mount/src/deploy-streamlit-last/lpsolve:' + os.environ.get('LD_LIBRARY_PATH', '')
-os.environ['PYTHONPATH'] = '/mount/src/deploy-streamlit-last:' + os.environ.get('PYTHONPATH', '')
 
 # Configure Streamlit page
 st.set_page_config(
