@@ -2,8 +2,8 @@ from setuptools import setup, Extension
 from Cython.Build import cythonize
 
 # Define the paths to LP Solve
-include_dirs = [r'/mount/src/deploy-streamlit-last/lpsolve']
-library_dirs = [r'/mount/src/deploy-streamlit-last/lpsolve']
+include_dirs = [r'/workspaces/deploy-streamlit-last/lpsolve']
+library_dirs = [r'/workspaces/deploy-streamlit-last/lpsolve']
 libraries = ["lpsolve55"]  # Replace with the correct library name if different
 
 # Build the extension
