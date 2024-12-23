@@ -4,9 +4,7 @@ import os
 import glob
 from ast import literal_eval
 
-correct_path = '/workspaces/deploy-streamlit-last'
-if correct_path not in sys.path:
-    sys.path.append(correct_path)
+os.environ['LD_LIBRARY_PATH'] = '/workspaces/deploy-streamlit-last/lpsolve:'
 
 # Import clara components
 from clara.matching import Matching
