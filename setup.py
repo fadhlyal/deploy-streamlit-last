@@ -19,4 +19,7 @@ extensions = [
 
 setup(
     ext_modules=cythonize(extensions, language_level="3"),
+    package_data={
+            'clara': ['liblpsolve55.so'],
+      },
 )
