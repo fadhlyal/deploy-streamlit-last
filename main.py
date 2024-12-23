@@ -15,6 +15,9 @@ from clara.feedback_repair import RepairFeedback
 from clara.feedback_simple import SimpleFeedback
 from clara.feedback_python import PythonFeedback
 
+os.environ['LD_LIBRARY_PATH'] = '/mount/src/deploy-streamlit-last/lpsolve:' + os.environ.get('LD_LIBRARY_PATH', '')
+os.environ['PYTHONPATH'] = '/mount/src/deploy-streamlit-last:' + os.environ.get('PYTHONPATH', '')
+
 # Configure Streamlit page
 st.set_page_config(
     page_title="Clara Program Analysis",

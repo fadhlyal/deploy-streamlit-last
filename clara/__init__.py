@@ -19,7 +19,6 @@ from . import java_interpreter
 from . import matching
 
 from . import ilp
-from . import pylpsolve
 from . import repair
 
 def get_pylpsolve():
