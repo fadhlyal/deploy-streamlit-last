@@ -9,7 +9,7 @@ os.environ['LD_LIBRARY_PATH'] = '/workspaces/deploy-streamlit-last/lpsolve'
 from clara.matching import Matching
 from clara.interpreter import getlanginter
 from clara.parser import getlangparser
-from clara.repairs import Repair
+from clara.repair import Repair
 from clara.feedback import Feedback, FeedGen
 from clara.feedback_repair import RepairFeedback
 from clara.feedback_simple import SimpleFeedback
