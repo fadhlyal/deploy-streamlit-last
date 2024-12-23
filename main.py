@@ -13,6 +13,9 @@ from clara.feedback_repair import RepairFeedback
 from clara.feedback_simple import SimpleFeedback
 from clara.feedback_python import PythonFeedback
 
+import sys
+print(sys.path)
+
 # Configure Streamlit page
 st.set_page_config(
     page_title="Clara Program Analysis",
